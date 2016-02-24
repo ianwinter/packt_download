@@ -15,3 +15,11 @@ bundle exec ruby download-packt-books.rb
 
 It's pretty basic so will output to screen. It won't download the book if the file already exists.
 
+You'll end up with files like this:
+
+```
+Unity_Game_Development_Blueprints.epub
+Unity_Game_Development_Blueprints.mobi
+Unity_Game_Development_Blueprints.pdf
+Unity_Game_Development_Blueprints_code.zip
+```
