@@ -33,7 +33,7 @@ download_base = config["downloadpath"]
 book_titles = my_books_page.search(".//div[@class='title']")
 book_titles.each do |b|
   title = b.children.text.lstrip.rstrip
-  book_block = my_books_page.search(".//div[@title='#{title}' and @class='product-line unseen']")
+  book_block = my_books_page.search(".//div[@title=\"#{title}\" and @class='product-line unseen']")
   # map book downloads to title
   book_block.each do |bk|
    book_map[bk.attributes['nid'].value] = title.sub(" [eBook]", "")
