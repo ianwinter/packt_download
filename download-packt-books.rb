@@ -3,10 +3,10 @@ require 'mechanize'
 require 'yaml'
 
 # read the config
-config = YAML.load(File.read(File.expand_path("config.yml")))
+config = YAML.load(File.read(File.expand_path("config/config.yml")))
 
 # read the tracking file
-downloaded_books = YAML::load_file("books.yml")
+downloaded_books = YAML::load_file(config["booklist"])
 
 # setup the agent
 agent = Mechanize.new
@@ -67,7 +67,7 @@ my_books_page.links.each do |link|
         agent.download(full_link, download_base + file_name)
         downloaded_books["list"] << "#{file_name}" unless downloaded_books["list"].include?("#{file_name}")
       end
-      File.open("books.yml", 'w') {|f| f.write downloaded_books.to_yaml }
+      File.open(config["booklist"], 'w') {|f| f.write downloaded_books.to_yaml }
     rescue Mechanize::ResponseReadError => e
       e.force_parse
       puts "  => " + file_name + " retrying"

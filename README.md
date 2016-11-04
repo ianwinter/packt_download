@@ -4,12 +4,16 @@ This script allows you to download, not only those books, but all of the books l
 
 This was based on ruby 2.2.3 but you can change the `.ruby-version` file as there's nothing too exciting in here.
 
-You'll need to rename `config.yml.example` to `config.yml` and edit it so that it has your email, password to login to packtpub.com and the path where you want the books to download, which, will need to exist already.
-
 Once done install the required gems with bundler.
 
 ```
 bundle install
+rake bootstrap
+```
+
+You'll need to edit `config.yml` so that it has your email, password to login to packtpub.com and the path where you want the books to download, which, will need to exist already.
+
+```
 bundle exec ruby download-packt-books.rb
 ```
 

@@ -1,0 +1,4 @@
+email: name@domain.com
+password: password
+downloadpath: /path/to/app/download
+booklist: /path/to/app/config/books.yml
