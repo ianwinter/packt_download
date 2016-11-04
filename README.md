@@ -4,12 +4,16 @@ This script allows you to download, not only those books, but all of the books l
 
 This was based on ruby 2.2.3 but you can change the `.ruby-version` file as there's nothing too exciting in here.
 
+## Installation
+
 Once done install the required gems with bundler.
 
 ```
 bundle install
 rake bootstrap
 ```
+
+## Running
 
 You'll need to edit `config.yml` so that it has your email, password to login to packtpub.com and the path where you want the books to download, which, will need to exist already.
 
@@ -27,3 +31,7 @@ Unity_Game_Development_Blueprints.mobi
 Unity_Game_Development_Blueprints.pdf
 Unity_Game_Development_Blueprints_code.zip
 ```
+
+## Credits / References
+
+I currenly use an older version of https://github.com/draconar/grab_packt to actually do the fetching of the books.
