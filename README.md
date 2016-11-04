@@ -21,7 +21,7 @@ You'll need to edit `config.yml` so that it has your email, password to login to
 bundle exec ruby download-packt-books.rb
 ```
 
-It's pretty basic so will output to screen. It won't download the book if the file already exists.
+It won't download the book if the file already exists in the `config/books.yml` list. Otherwise right now it won't output anything.
 
 You'll end up with files like this:
 
